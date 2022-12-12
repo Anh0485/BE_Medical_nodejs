@@ -15,13 +15,16 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            image:{
+            image: {
+                type: Sequelize.BLOB('long')
+            },
+            name: {
                 type: Sequelize.STRING
             },
-            name:{
-                type: Sequelize.STRING
+            descriptionHTML: {
+                type: Sequelize.TEXT
             },
-            description:{
+            descriptionMarkdown: {
                 type: Sequelize.TEXT
             },
             createdAt: {
