@@ -12,7 +12,14 @@ module.exports = {
       },
       doctorId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+
+      },
+      specialtyId: {
+        type: Sequelize.INTEGER,
+
+      },
+      clinicId: {
+        type: Sequelize.INTEGER,
       },
       priceId: {
         type: Sequelize.STRING,
@@ -30,19 +37,19 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
-      nameClinic:{
+      nameClinic: {
         type: Sequelize.STRING,
-        allowNull:false,
-      }, 
-      note:{
+        allowNull: false,
+      },
+      note: {
         type: Sequelize.STRING
       },
       count: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        default:0
+        default: 0
       },
-      createdAt:{
+      createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
@@ -50,7 +57,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-     
+
     });
   },
   down: async (queryInterface, Sequelize) => {
