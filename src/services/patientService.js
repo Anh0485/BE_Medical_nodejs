@@ -32,7 +32,6 @@ let postBookAppointment = (data) => {
                     doctorName: data.doctorName,
                     language: data.language,
                     redirectLink: buildUrlEmail(data.doctorId, token)
-
                 })
 
                 //upset patient
@@ -94,7 +93,7 @@ let postVerifyBookAppointment = (data) => {
                     raw: false
                 })
                 if (appointment) {
-                    appointment.statusId = 'S2';
+                    appointment.statusId = 'S2'
                     await appointment.save();
                     resolve({
                         errCode: 0,

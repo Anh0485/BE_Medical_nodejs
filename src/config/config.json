@@ -7,9 +7,6 @@
     "dialect": "mysql",
     "query": {
       "raw": true
-    },
-    "define": {
-      "timestamps": false
     }
   },
   "test": {
