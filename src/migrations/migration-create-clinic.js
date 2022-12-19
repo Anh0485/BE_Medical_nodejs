@@ -9,13 +9,19 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
+            image: {
+                type: Sequelize.BLOB('long')
+            },
             address: {
                 type: Sequelize.STRING
             },
             name: {
                 type: Sequelize.STRING
             },
-            description: {
+            descriptionHTML: {
+                type: Sequelize.TEXT
+            },
+            descriptionMarkdown: {
                 type: Sequelize.TEXT
             },
             image: {
