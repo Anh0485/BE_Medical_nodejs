@@ -4,6 +4,9 @@
         "password": null,
         "database": "project1",
         "host": "127.0.0.1",
-        "dialect": "mysql"
+        "dialect": "mysql",
+        "query": {
+            "raw": true
+          }
     }
 }
