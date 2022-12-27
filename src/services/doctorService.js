@@ -291,7 +291,8 @@ let getScheduleByDate = (doctorId, date) => {
                                     attributes: ['valueEn', 'ValueVi']
                                 },
                             ]
-                        }
+                        },
+
 
 
 
@@ -429,7 +430,19 @@ let getListPatientForDoctor = (doctorId, date) => {
                         {
                             model: db.User,
                             as: 'patientData',
-                            attributes: ['email', 'firstName', 'address', 'gender']
+                            attributes: ['email', 'firstName', 'address', 'gender'],
+                            include: [
+                                {
+                                    model: db.Allcode,
+                                    as: 'genderData',
+                                    attributes: ['valueEn', 'ValueVi']
+                                },
+                            ]
+                        },
+                        {
+                            model: db.Allcode,
+                            as: 'timeTypeDataPatient',
+                            attributes: ['valueEn', 'ValueVi']
                         },
                     ],
                     raw: false, // trả dưới dạng sequelize object
